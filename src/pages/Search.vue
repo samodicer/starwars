@@ -1,6 +1,7 @@
 <template>
   <q-page class="q-pa-md flex row justify-center">
-    <div style="width: 400px">
+    <div style="width: auto">
+      <div class="flex justify-center q-mb-lg text-h2">StarWars search</div>
       <MyInput />
       <div v-if="getCharacters.length > 0">
         <div v-for="(character, index) in getCharacters" :key="index">
@@ -8,10 +9,10 @@
         </div>
       </div>
       <div v-else-if="getSearchedText">
-        <MyMessage :message="'Nothing found.'" />
+        <MyMessage :message="'Nothing found'" />
       </div>
       <div v-else>
-        <MyMessage :message="'Enter search phrase.'" />
+        <MyMessage :message="'Enter search phrase'" />
       </div>
     </div>
   </q-page>

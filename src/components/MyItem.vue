@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: "CharacterItem",
+  name: "MyItem",
   props: {
     name: {
       type: String,
@@ -16,7 +16,7 @@ export default {
 
 <style lang="scss" scoped>
 .item {
-  margin: 5px;
+  margin-bottom: 5px;
   background-color: $navyblue;
   color: white;
 }

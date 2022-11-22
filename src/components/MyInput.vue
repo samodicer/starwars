@@ -1,8 +1,14 @@
 <template>
-  <q-input class="input" outlined label="Name" v-model="searchedText">
+  <q-input
+    class="q-my-md"
+    color="gemgreen"
+    outlined
+    label="Name"
+    v-model="searchedText"
+  >
     <template v-slot:append>
       <q-avatar>
-        <q-icon name="search" />
+        <q-icon name="search" color="gemgreen" size="24px" />
       </q-avatar>
     </template>
   </q-input>
@@ -19,12 +25,6 @@ export default {
       debounce: null,
     };
   },
-  props: {
-    name: {
-      type: String,
-      default: "",
-    },
-  },
   methods: {
     ...mapActions({
       searchCharacters: "characters/searchCharacters",
@@ -35,7 +35,7 @@ export default {
       clearTimeout(this.debounce);
       this.debounce = setTimeout(() => {
         this.searchCharacters(val).then(() => {
-          console.log("done");
+          console.log("Search results updated.");
         });
       }, 600);
     },
