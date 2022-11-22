@@ -21,7 +21,6 @@ const actions = {
           } else {
             commit("clearSearchedCharacters");
           }
-          commit("setSearchedText", search);
           resolve();
         })
         .catch((error) => {
@@ -29,6 +28,9 @@ const actions = {
           reject(error);
         });
     });
+  },
+  async updateSearchedText({ commit }, text) {
+    commit("setSearchedText", text);
   },
 };
 

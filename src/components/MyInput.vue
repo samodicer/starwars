@@ -28,6 +28,7 @@ export default {
   methods: {
     ...mapActions({
       searchCharacters: "characters/searchCharacters",
+      updateSearchedText: "characters/updateSearchedText",
     }),
   },
   watch: {
@@ -35,6 +36,7 @@ export default {
       clearTimeout(this.debounce);
       this.debounce = setTimeout(() => {
         this.searchCharacters(val).then(() => {
+          this.updateSearchedText(val);
           console.log("Search results updated.");
         });
       }, 600);
