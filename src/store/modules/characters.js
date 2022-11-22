@@ -12,6 +12,7 @@ const getters = {
 
 const actions = {
   async searchCharacters({ commit }, search) {
+    console.log("Requesting api...");
     return new Promise((resolve, reject) => {
       Vue.prototype.$axios
         .get("people/?search=" + search)

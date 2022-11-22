@@ -40,4 +40,7 @@ export default {
   background-color: $navyblue;
   color: white;
 }
+.text {
+  margin: auto;
+}
 </style>
