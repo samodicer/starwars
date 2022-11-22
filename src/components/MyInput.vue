@@ -44,10 +44,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-.input {
-  margin: 5px;
-  color: $gemgreen !important;
-}
-</style>
