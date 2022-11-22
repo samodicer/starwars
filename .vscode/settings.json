@@ -1,6 +1,7 @@
 {
   "vetur.validation.template": false,
   "vetur.format.enable": false,
+  "vetur.validation.interpolation": false,
   "eslint.validate": [
     "javascript",
     "javascriptreact",
