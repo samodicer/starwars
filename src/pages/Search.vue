@@ -1,7 +1,7 @@
 <template>
   <q-page class="q-pa-md flex row justify-center">
     <div style="width: auto">
-      <div class="flex justify-center q-mb-lg text-h2">StarWars search</div>
+      <p class="flex justify-center q-mb-xl text-h2">StarWars search</p>
       <MyInput />
       <div v-if="getCharacters.length > 0">
         <div v-for="(character, index) in getCharacters" :key="index">

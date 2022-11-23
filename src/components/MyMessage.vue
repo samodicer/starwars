@@ -1,5 +1,5 @@
 <template>
-  <div class="message">{{ message }}</div>
+  <p class="message">{{ message }}</p>
 </template>
 
 <script>
@@ -8,7 +8,7 @@ export default {
   props: {
     message: {
       type: String,
-      default: "",
+      required: true,
     },
   },
 };

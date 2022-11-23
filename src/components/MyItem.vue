@@ -1,7 +1,7 @@
 <template>
-  <q-banner class="item" rounded>
+  <q-banner class="q-mb-xs bg-navyblue text-white" rounded>
     <p
-      class="text"
+      class="q-my-auto"
       v-html="$options.filters.highlight(name, getSearchedText)"
     ></p>
   </q-banner>
@@ -15,7 +15,7 @@ export default {
   props: {
     name: {
       type: String,
-      default: "",
+      required: true,
     },
   },
   computed: {
@@ -25,7 +25,9 @@ export default {
   },
   filters: {
     highlight: function (word, query) {
-      var check = new RegExp(query, "ig");
+      //regular expresion for matching text -> i (ignore case), g (global)
+      let check = new RegExp(query, "ig");
+      //returning text with the highlighted part to html element using v-html
       return word.toString().replace(check, function (matchedText) {
         return "<strong>" + matchedText + "</strong>";
       });
@@ -33,14 +35,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-.item {
-  margin-bottom: 5px;
-  background-color: $navyblue;
-  color: white;
-}
-.text {
-  margin: auto;
-}
-</style>

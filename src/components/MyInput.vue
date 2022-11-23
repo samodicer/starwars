@@ -32,8 +32,11 @@ export default {
     }),
   },
   watch: {
+    //watching searchedText for updated value
     searchedText: function (val) {
+      //remove timeout
       clearTimeout(this.debounce);
+      //set delay 600ms so that user does not requesting API every time a key is pressed
       this.debounce = setTimeout(() => {
         this.searchCharacters(val).then(() => {
           this.updateSearchedText(val);

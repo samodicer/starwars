@@ -1,7 +1,13 @@
 // app global css in SCSS form
 .text-gemgreen { 
-    color: $gemgreen; 
+    color: $gemgreen !important; 
 } 
 .bg-gemgreen { 
-    background: $gemgreen; 
+    background: $gemgreen !important; 
+}
+.text-navyblue { 
+    color: $navyblue !important; 
+} 
+.bg-navyblue { 
+    background: $navyblue !important; 
 }
