@@ -1,6 +1,6 @@
 <template>
   <q-page class="q-pa-md flex row justify-center">
-    <div style="width: auto">
+    <div>
       <p class="flex justify-center q-mb-xl text-h2">StarWars search</p>
       <MyInput />
       <div v-if="getCharacters.length > 0">

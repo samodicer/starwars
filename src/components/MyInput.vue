@@ -38,7 +38,9 @@ export default {
       clearTimeout(this.debounce);
       //set delay 600ms so that user does not requesting API every time a key is pressed
       this.debounce = setTimeout(() => {
+        //call action in Vuex store to request API
         this.searchCharacters(val).then(() => {
+          //then call action in Vuex store to update searched text
           this.updateSearchedText(val);
           console.log("Search results updated.");
         });
