@@ -27,9 +27,6 @@ import MyMessage from "src/components/MyMessage.vue";
 export default {
   name: "Search",
   components: { MyItem, MyInput, MyMessage },
-  data() {
-    return {};
-  },
   computed: {
     ...mapGetters({
       getCharacters: "characters/getCharacters",
